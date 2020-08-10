@@ -24,10 +24,35 @@ function randomAndComplementaryColor() {
   greenCompl = 255 - greenOne;
   blueCompl = 255 - blueOne;
 }
+// function for checking before start the game "checkBeforeStart()"
+
+var selectCharacterOne;
+var selectCharacterTwo;
+
+function checkBeforeStart() {
+  selectCharacterOne = document.getElementById("select-character-one").value;
+  selectCharacterTwo = document.getElementById("select-character-two").value;
+  if (selectCharacterOne === selectCharacterTwo) {
+    alert("Select two different character");
+  } else {
+    document.getElementById("homepage").classList.add("d-none");
+    document.getElementById("game").classList.remove("d-none");
+    startGame();
+  }
+}
+
+// function startGame
+
+function startGame() {
+  alert("game started");
+}
 
 
 // script
 
-randomAndComplementaryColor();
-document.getElementById("color-one").style.background = "rgb(" + redOne + ", " + greenOne + ", " + blueOne + ")";
-document.getElementById("color-two").style.background = "rgb(" + redCompl + ", " + greenCompl + ", " + blueCompl + ")";
+// randomAndComplementaryColor();
+// document.getElementById("color-one").style.background = "rgb(" + redOne + ", " + greenOne + ", " + blueOne + ")";
+// document.getElementById("color-two").style.background = "rgb(" + redCompl + ", " + greenCompl + ", " + blueCompl + ")";
+
+
+document.getElementById("start-game").addEventListener("click", checkBeforeStart);

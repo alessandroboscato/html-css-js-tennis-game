@@ -1,5 +1,7 @@
 // sass file...
 
+/* GENERAL */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,9 +9,69 @@
 }
 
 body {
-  display: flex;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100vh;
 }
 body > div {
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+}
+
+/* MIX */
+.d-none {
+  display: none !important;
+}
+
+/* TYPO */
+h1 {
+  color: #fff;
+  text-decoration: underline;
+
+  font-size: 60px;
+}
+
+/* ELEMENTS */
+
+
+/* main */
+
+#homepage {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../img/grass-pattern.jpg");
+
+  .box-select {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+
+    width: 40%;
+    height: 30vh;
+    padding: 30px;
+
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    > div {
+      display: flex;
+
+      width: 100%;
+      margin: 0 0 20px;
+      > * {
+        width: 100%;
+      }
+    }
+    label {
+      color: #fff;
+    }
+
+  }
 }

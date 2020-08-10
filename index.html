@@ -8,10 +8,41 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- homepage -->
+    <div id="homepage">
+      <h1>Tennis Game</h1>
+      <!-- box select -->
+      <div class="box-select">
+        <!-- first select -->
+        <div>
+          <label for="select-character-one">Select the first character</label>
+          <select id="select-character-one">
+            <option value="Luca">Luca</option>
+            <option value="Mario">Mario</option>
+          </select>
+        </div>
+        <!-- /first select -->
+        <!-- second select -->
+        <div>
+          <label for="select-character-two">Select the second character</label>
+          <select id="select-character-two">
+            <option value="Luca">Luca</option>
+            <option value="Mario">Mario</option>
+          </select>
+        </div>
+        <!-- /second select -->
+        <button type="button" id="start-game">START</button>
+      </div>
+      <!-- /box select -->
+    </div>
+    <!-- /homepage -->
+    <!-- game -->
+    <div id="game" class="d-none">
 
-    <div id="color-one"></div>
-    <div id="color-two"></div>
+    </div>
+    <!-- /game -->
 
+    <!-- added script -->
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
