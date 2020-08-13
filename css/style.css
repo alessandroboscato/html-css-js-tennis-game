@@ -16,6 +16,10 @@ body > div {
   height: 100vh;
 }
 
+.green {
+  background-color: green;
+}
+
 /* MIX */
 .d-none {
   display: none !important;
@@ -64,6 +68,67 @@ h1 {
 
 #homepage .box-select label {
   color: #fff;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: calc(10% - 10px) 10% calc(30% - 15px) calc(30% - 15px) 10% calc(10% - 10px);
+  grid-template-rows: calc(10% - 10px) 10% calc(30% - 15px) calc(30% - 15px) 10% calc(10% - 10px);
+  gap: 10px 10px;
+  grid-template-areas: "hallway-left hallway-left hallway-left hallway-left hallway-left hallway-left" "bot-play bot-play bot-left-net top-left-net top-play top-play" "bot-play bot-play bot-left-net top-left-net top-play top-play" "bot-play bot-play bot-right-net top-right-net top-play top-play" "bot-play bot-play bot-right-net top-right-net top-play top-play" "hallway-right hallway-right hallway-right hallway-right hallway-right hallway-right";
+}
+
+#game .top-play {
+  grid-area: top-play;
+}
+
+#game .top-left-net {
+  grid-area: top-left-net;
+}
+
+#game .top-right-net {
+  grid-area: top-right-net;
+}
+
+#game .bot-play {
+  grid-area: bot-play;
+}
+
+#game .bot-left-net {
+  grid-area: bot-left-net;
+}
+
+#game .bot-right-net {
+  grid-area: bot-right-net;
+}
+
+#game .hallway-left {
+  grid-area: hallway-left;
+}
+
+#game .hallway-right {
+  grid-area: hallway-right;
+}
+
+#game .net {
+  width: 12px;
+  height: 100vh;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: calc( 50% - 6px);
+}
+
+@media screen and (max-width: 991px) {
+  #game {
+    grid-template-areas: "hallway-left top-play top-play top-play top-play hallway-right" "hallway-left top-play top-play top-play top-play hallway-right" "hallway-left top-left-net top-left-net top-right-net top-right-net hallway-right" "hallway-left bot-left-net bot-left-net bot-right-net bot-right-net hallway-right" "hallway-left bot-play bot-play bot-play bot-play hallway-right" "hallway-left bot-play bot-play bot-play bot-play hallway-right";
+  }
+  #game .net {
+    width: 100%;
+    height: 12px;
+    top: calc( 50% - 6px);
+    left: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
