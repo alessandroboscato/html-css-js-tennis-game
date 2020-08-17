@@ -81,6 +81,7 @@ h1 {
 
 #game .top-play {
   grid-area: top-play;
+  position: relative;
 }
 
 #game .top-left-net {
@@ -93,6 +94,7 @@ h1 {
 
 #game .bot-play {
   grid-area: bot-play;
+  position: relative;
 }
 
 #game .bot-left-net {
@@ -192,13 +194,13 @@ h1 {
 }
 
 #character-one {
-  top: 100px;
-  left: 100px;
+  top: 0;
+  left: 80%;
 }
 
 #character-two {
-  top: 300px;
-  left: 300px;
+  top: calc(100% - 80px);
+  left: calc(20% - 30px);
 }
 
 /*# sourceMappingURL=style.css.map */

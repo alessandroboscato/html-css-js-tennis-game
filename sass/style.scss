@@ -100,6 +100,7 @@ h1 {
                         "hallway-right hallway-right hallway-right hallway-right hallway-right hallway-right";
   .top-play {
     grid-area: top-play;
+    position: relative;
   }
   .top-left-net {
     grid-area: top-left-net;
@@ -109,6 +110,7 @@ h1 {
   }
   .bot-play {
     grid-area: bot-play;
+    position: relative;
   }
   .bot-left-net {
     grid-area: bot-left-net;
@@ -220,10 +222,10 @@ $leg-heigth: 25px;
 }
 
 #character-one {
-  top: 100px;
-  left: 100px;
+  top: 0;
+  left: 80%;
 }
 #character-two {
-  top: 300px;
-  left: 300px;
+  top: calc(100% - 80px;);
+  left: calc(20% - 30px);
 }
