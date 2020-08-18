@@ -41,11 +41,53 @@ function checkBeforeStart() {
   }
 }
 
+// function create random number for the TOP
+function toRightBall() {
+  var toRight = (Math.random() * 78) + 10;
+  console.log(toRight);
+  tennisBall.style.top = toRight + "%";
+  tennisBall.style.left = "calc(80% - 35px)";
+}
+function toLeftBall() {
+  var toRight = (Math.random() * 78) + 10;
+  console.log(toRight);
+  tennisBall.style.top = toRight + "%";
+  tennisBall.style.left = "calc(20% + 10px)";
+}
+
 // function startGame
 
+//min top-left (10% | 20%+10px)
+//max bot-right (90%-25px | 80%-35px) 
+var tennisBall = document.getElementById("tennis-ball");
+
 function startGame() {
-  alert("game started");
+  var score1 = 0;
+  var score2 = 0;
+
+  setTimeout(toRightBall, 2000);
+  setTimeout(toLeftBall, 4000);
+  setTimeout(toRightBall, 6000);
+  setTimeout(toLeftBall, 8000);
+  setTimeout(toRightBall, 10000);
+  setTimeout(toLeftBall, 12000);
+  setTimeout(toRightBall, 14000);
+  setTimeout(toLeftBall, 16000);
+  setTimeout(toRightBall, 18000);
+  setTimeout(toLeftBall, 20000);
+  setTimeout(toRightBall, 22000);
+  setTimeout(toLeftBall, 24000);
+  setTimeout(toRightBall, 26000);
+  setTimeout(toLeftBall, 28000);
+  setTimeout(toRightBall, 30000);
+  setTimeout(toLeftBall, 32000);
+  setTimeout(toRightBall, 34000);
+  setTimeout(toLeftBall, 36000);
+  setTimeout(toRightBall, 38000);
+  setTimeout(toLeftBall, 40000);
+
 }
+
 
 
 // script

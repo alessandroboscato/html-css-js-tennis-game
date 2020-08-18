@@ -80,8 +80,8 @@ h1 {
 }
 
 #game .top-play {
-  grid-area: top-play;
   position: relative;
+  grid-area: top-play;
 }
 
 #game .top-left-net {
@@ -93,8 +93,8 @@ h1 {
 }
 
 #game .bot-play {
-  grid-area: bot-play;
   position: relative;
+  grid-area: bot-play;
 }
 
 #game .bot-left-net {
@@ -120,6 +120,18 @@ h1 {
   width: 12px;
   height: 100vh;
   background-color: #000;
+}
+
+#game .tennis-ball {
+  position: absolute;
+  top: 10%;
+  left: calc(20% + 10px);
+  transition: left 2s ease, top 2s ease;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/tennis-ball.png);
+  background-position: center;
+  background-size: cover;
 }
 
 @media screen and (max-width: 991px) {
@@ -180,8 +192,8 @@ h1 {
   left: 3px;
   width: 3px;
   height: 25px;
-  background-color: #000;
   transform: rotate(30deg);
+  background-color: #000;
 }
 
 .character .leg-right {
@@ -189,8 +201,8 @@ h1 {
   left: 14px;
   width: 3px;
   height: 25px;
-  background-color: #000;
   transform: rotate(-30deg);
+  background-color: #000;
 }
 
 #character-one {
@@ -200,7 +212,7 @@ h1 {
 
 #character-two {
   top: calc(100% - 80px);
-  left: calc(20% - 30px);
+  left: calc(20% - 25px);
 }
 
 /*# sourceMappingURL=style.css.map */

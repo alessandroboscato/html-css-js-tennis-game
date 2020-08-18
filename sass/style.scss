@@ -99,8 +99,9 @@ h1 {
                         "bot-play bot-play bot-right-net top-right-net top-play top-play"
                         "hallway-right hallway-right hallway-right hallway-right hallway-right hallway-right";
   .top-play {
-    grid-area: top-play;
     position: relative;
+
+    grid-area: top-play;
   }
   .top-left-net {
     grid-area: top-left-net;
@@ -109,8 +110,9 @@ h1 {
     grid-area: top-right-net;
   }
   .bot-play {
-    grid-area: bot-play;
     position: relative;
+
+    grid-area: bot-play;
   }
   .bot-left-net {
     grid-area: bot-left-net;
@@ -133,6 +135,20 @@ h1 {
     height: 100vh;
 
     background-color: $netColor;
+  }
+  .tennis-ball {
+    position: absolute;
+    top: 10%;
+    left: calc(20% + 10px);
+
+    transition: left 2s ease, top 2s ease;
+
+    width: 25px;
+    height: 25px;
+
+    background-image: url(../img/tennis-ball.png);
+    background-position: center;
+    background-size: cover;
   }
 }
 @media screen and (max-width: 991px) {
@@ -190,34 +206,46 @@ $leg-heigth: 25px;
   .arm-left {
     top: $head-heigth - 3px;
     left: -1px;
+
     width: $arm-width;
     height: $arm-heigth;
+
     transform: rotate(45deg);
+
     background-color: #000;
   }
   .arm-right {
     top: $head-heigth - 3px;
     left: 18px;
+
     width: $arm-width;
     height: $arm-heigth;
+
     transform: rotate(-45deg);
+
     background-color: #000;
   }
   .leg-left {
     top: $head-heigth + $body-heigth - 5px;
     left: 3px;
+
     width: $leg-width;
     height: $leg-heigth;
-    background-color: #000;
+
     transform: rotate(30deg);
+
+    background-color: #000;
   }
   .leg-right {
     top: $head-heigth + $body-heigth - 5px;
     left: 14px;
+
     width: $leg-width;
     height: $leg-heigth;
-    background-color: #000;
+
     transform: rotate(-30deg);
+
+    background-color: #000;
   }
 }
 
@@ -227,5 +255,5 @@ $leg-heigth: 25px;
 }
 #character-two {
   top: calc(100% - 80px;);
-  left: calc(20% - 30px);
+  left: calc(20% - 25px);
 }
