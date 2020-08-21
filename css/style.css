@@ -217,11 +217,13 @@ h1 {
 #character-one {
   top: 0;
   left: 80%;
+  transition: top 2s ease;
 }
 
 #character-two {
   top: calc(100% - 80px);
   left: calc(20% - 25px);
+  transition: top 2s ease;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -42,17 +42,20 @@ function checkBeforeStart() {
 }
 
 // function create random number for the TOP
+
 function toRightBall() {
   var toRight = (Math.random() * 78) + 10;
   console.log(toRight);
   tennisBall.style.top = toRight + "%";
   tennisBall.style.left = "calc(80% - 35px)";
+  document.getElementById("character-two").style.top = toRight - 2 + "%";
 }
 function toLeftBall() {
-  var toRight = (Math.random() * 78) + 10;
-  console.log(toRight);
-  tennisBall.style.top = toRight + "%";
+  var toLeft = (Math.random() * 78) + 10;
+  console.log(toLeft);
+  tennisBall.style.top = toLeft + "%";
   tennisBall.style.left = "calc(20% + 10px)";
+  document.getElementById("character-one").style.top = toLeft - 2 + "%";
 }
 
 // function startGame
@@ -60,29 +63,26 @@ function toLeftBall() {
 //min top-left (10% | 20%+10px)
 //max bot-right (90%-25px | 80%-35px)
 
-randomAndComplementaryColor();
-document.getElementById("color-one").style.background = "rgb(" + redOne + ", " + greenOne + ", " + blueOne + ")";
-document.getElementById("color-two").style.background = "rgb(" + redCompl + ", " + greenCompl + ", " + blueCompl + ")";
-
 var tennisBall = document.getElementById("tennis-ball");
 
 function startGame() {
   var score1 = 0;
   var score2 = 0;
 
+  randomAndComplementaryColor();
+  document.getElementById("color-one").style.background = "rgb(" + redOne + ", " + greenOne + ", " + blueOne + ")";
+  document.getElementById("color-two").style.background = "rgb(" + redCompl + ", " + greenCompl + ", " + blueCompl + ")";
+
   setInterval(
     function()
     {
-      setTimeout(toRightBall, 2000);
-      setTimeout(toLeftBall, 4000);
-    }, 4000
+      setTimeout(toRightBall, 1600);
+      setTimeout(toLeftBall, 3200);
+    }, 3200
   );
 }
 
 
-
 // script
-
-
 
 document.getElementById("start-game").addEventListener("click", checkBeforeStart);
