@@ -59,6 +59,11 @@ function toLeftBall() {
 
 //min top-left (10% | 20%+10px)
 //max bot-right (90%-25px | 80%-35px)
+
+randomAndComplementaryColor();
+document.getElementById("color-one").style.background = "rgb(" + redOne + ", " + greenOne + ", " + blueOne + ")";
+document.getElementById("color-two").style.background = "rgb(" + redCompl + ", " + greenCompl + ", " + blueCompl + ")";
+
 var tennisBall = document.getElementById("tennis-ball");
 
 function startGame() {
@@ -68,8 +73,8 @@ function startGame() {
   setInterval(
     function()
     {
-    setTimeout(toRightBall, 2000);
-    setTimeout(toLeftBall, 4000);
+      setTimeout(toRightBall, 2000);
+      setTimeout(toLeftBall, 4000);
     }, 4000
   );
 }
@@ -78,9 +83,6 @@ function startGame() {
 
 // script
 
-// randomAndComplementaryColor();
-// document.getElementById("color-one").style.background = "rgb(" + redOne + ", " + greenOne + ", " + blueOne + ")";
-// document.getElementById("color-two").style.background = "rgb(" + redCompl + ", " + greenCompl + ", " + blueCompl + ")";
 
 
 document.getElementById("start-game").addEventListener("click", checkBeforeStart);

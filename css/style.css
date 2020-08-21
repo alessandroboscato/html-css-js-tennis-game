@@ -126,9 +126,9 @@ h1 {
   position: absolute;
   top: 10%;
   left: calc(20% + 10px);
-  transition: left 2s ease, top 2s ease;
   width: 25px;
   height: 25px;
+  transition: left 2s ease, top 2s ease;
   background-image: url(../img/tennis-ball.png);
   background-position: center;
   background-size: cover;
@@ -167,6 +167,15 @@ h1 {
   width: 4px;
   height: 30px;
   background-color: #000;
+}
+
+.character .body .shirt {
+  top: 8%;
+  left: -75%;
+  width: 250%;
+  height: 80%;
+  border: 1px solid #000;
+  background-color: red;
 }
 
 .character .arm-left {

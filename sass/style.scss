@@ -141,10 +141,10 @@ h1 {
     top: 10%;
     left: calc(20% + 10px);
 
-    transition: left 2s ease, top 2s ease;
-
     width: 25px;
     height: 25px;
+
+    transition: left 2s ease, top 2s ease;
 
     background-image: url(../img/tennis-ball.png);
     background-position: center;
@@ -202,6 +202,16 @@ $leg-heigth: 25px;
     height: $body-heigth;
 
     background-color: #000;
+    .shirt {
+      top: 8%;
+      left: -75%;
+
+      width: 250%;
+      height: 80%;
+
+      border: 1px solid #000;
+      background-color: red;
+    }
   }
   .arm-left {
     top: $head-heigth - 3px;
